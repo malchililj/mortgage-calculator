@@ -5,8 +5,8 @@
 @font-face {
     font-family: 'Neutral';
     src: url("./assets/font/Neutral.ttf");
-    /* font-weight: normal;
-    font-style: normal; */
+    font-weight: normal;
+    font-style: normal;
   }
 
 body {
