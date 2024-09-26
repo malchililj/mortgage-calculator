@@ -1,0 +1,29 @@
+<form (ngSubmit)="calculateMortgage()">
+    <div>
+      <label for="loanAmount">Loan Amount:</label>
+      <input type="number" id="loanAmount" [(ngModel)]="loanAmount" name="loanAmount" required>
+    </div>
+    <div>
+      <label for="interestRate">Interest Rate (%):</label>
+      <input type="number" id="interestRate" [(ngModel)]="interestRate" name="interestRate" required>
+    </div>
+    <div>
+      <label for="loanTerm">Loan Term (years):</label>
+      <input type="number" id="loanTerm" [(ngModel)]="loanTerm" name="loanTerm" required>
+    </div>
+    <div>
+      <label for="propertyValue">Property Value:</label>
+      <input type="number" id="propertyValue" [(ngModel)]="propertyValue" name="propertyValue" required>
+    </div>
+    <div>
+      <label for="monthlyDebt">Monthly Debt:</label>
+      <input type="number" id="monthlyDebt" [(ngModel)]="monthlyDebt" name="monthlyDebt" required>
+    </div>
+    <div>
+      <label for="monthlyIncome">Monthly Income:</label>
+      <input type="number" id="monthlyIncome" [(ngModel)]="monthlyIncome" name="monthlyIncome" required>
+    </div>
+    <button type="submit">Calculate</button>
+  </form>
+  
+  <app-results-display [monthlyPayment]="monthlyPayment" [ltv]="ltv" [dti]="dti"></app-results-display>

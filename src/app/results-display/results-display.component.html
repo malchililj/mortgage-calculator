@@ -1,0 +1,6 @@
+<div *ngIf="monthlyPayment > 0">
+    <h2>Results</h2>
+    <p>Monthly Payment: ${{ monthlyPayment | number:'1.2-2' }}</p>
+    <p>Loan-to-Value Ratio: {{ ltv | number:'1.2-2' }}%</p>
+    <p>Debt-to-Income Ratio: {{ dti | number:'1.2-2' }}%</p>
+  </div>

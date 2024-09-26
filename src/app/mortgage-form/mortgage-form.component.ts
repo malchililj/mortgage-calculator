@@ -1,0 +1,33 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { ResultsDisplayComponent } from '../results-display/results-display.component';
+import { MortgageService } from '../mortgage.service';
+
+@Component({
+  selector: 'app-mortgage-form',
+  templateUrl: './mortgage-form.component.html',
+  styleUrls: ['./mortgage-form.component.css'],
+  standalone: true,
+  imports: [CommonModule, FormsModule, ResultsDisplayComponent]
+})
+export class MortgageFormComponent {
+  loanAmount: number = 0;
+  interestRate: number = 0;
+  loanTerm: number = 30;
+  propertyValue: number = 0;
+  monthlyDebt: number = 0;
+  monthlyIncome: number = 0;
+
+  monthlyPayment: number = 0;
+  ltv: number = 0;
+  dti: number = 0;
+
+  constructor(private mortgageService: MortgageService) {}
+
+  calculateMortgage() {
+    this.monthlyPayment = this.mortgageService.calculateMonthlyPayment(this.loanAmount, this.interestRate, this.loanTerm);
+    this.ltv = this.mortgageService.calculateLTV(this.loanAmount, this.propertyValue);
+    this.dti = this.mortgageService.calculateDTI(this.monthlyDebt, this.monthlyIncome);
+  }
+}
