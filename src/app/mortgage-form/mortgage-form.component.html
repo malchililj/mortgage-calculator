@@ -1,11 +1,11 @@
-<div class=" flex w-full">
+<div class=" flex w-full flex-col md:flex-row">
   <div class="flex-[4]">
     <div class=" rounded-xl bg-white p-10">
       <div class="logo w-[34.75px] h-[40px]"></div>
       <div class=" text-[#262B2C] text-2xl font-semibold  mt-10">Your Mortgage</div>
       <div class="text-[#262B2C] text-4xl font-semibold mt-5">Calculate Your mortgage</div>
       <form (ngSubmit)="calculateMortgage()">
-        <div class="flex justify-between gap-4">
+        <div class="flex justify-between gap-4 my-10">
           <div class="flex-1">
             <div class="flex gap-2 items-center">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +67,7 @@
             </div>
           </div>
         </div>
-        <div class="flex justify-between gap-4">
+        <div class="flex justify-between gap-4 my-10">
           <div class="flex-1">
             <div class="flex gap-2 items-center">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -146,7 +146,7 @@
           </div>
         </div>
 
-        <div class="flex-1">
+        <div class="flex-1 my-10">
           <div class="flex gap-2 items-center">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_4392_382)">
@@ -204,7 +204,7 @@
         Step</button>
     </div>
   </div>
-  <div class="flex-[3] p-16">
+  <div class="flex-[3] p-16 flex items-center">
     <app-results-display [monthlyPayment]="monthlyPayment" [ltv]="ltv" [dti]="dti"></app-results-display>
   </div>
 </div>
