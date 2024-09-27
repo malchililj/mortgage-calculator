@@ -15,7 +15,6 @@ export class MortgageService {
   }
 
   calculateDTI(monthlyPayment: number, grossHousehold: number): number {
-    console.log(monthlyPayment, grossHousehold, "-------")
     return (monthlyPayment / (grossHousehold / 12)) * 100;
   }
 }
