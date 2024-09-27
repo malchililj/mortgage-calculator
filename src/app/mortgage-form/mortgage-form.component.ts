@@ -57,7 +57,7 @@ export class MortgageFormComponent {
 
   calculateMortgage() {
     this.monthlyPayment = this.mortgageService.calculateMonthlyPayment(this.loanAmount, this.interestRate, this.loanTerm);
-    this.ltv = this.mortgageService.calculateLTV(this.loanAmount, this.propertyValue);
-    this.dti = this.mortgageService.calculateDTI(this.monthlyDebt, this.monthlyIncome);
+    this.ltv = this.mortgageService.calculateLTV(this.loanAmount, this.purchasePrice);
+    this.dti = this.mortgageService.calculateDTI(this.monthlyPayment, this.grossHousehold);
   }
 }

@@ -10,11 +10,12 @@ export class MortgageService {
     return (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
   }
 
-  calculateLTV(loanAmount: number, propertyValue: number): number {
-    return (loanAmount / propertyValue) * 100;
+  calculateLTV(loanAmount: number, purchasePrice: number): number {
+    return (loanAmount / purchasePrice) * 100;
   }
 
-  calculateDTI(monthlyDebt: number, monthlyIncome: number): number {
-    return (monthlyDebt / monthlyIncome) * 100;
+  calculateDTI(monthlyPayment: number, grossHousehold: number): number {
+    console.log(monthlyPayment, grossHousehold, "-------")
+    return (monthlyPayment / (grossHousehold / 12)) * 100;
   }
 }
