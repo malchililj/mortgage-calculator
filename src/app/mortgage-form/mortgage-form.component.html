@@ -1,11 +1,11 @@
-<div class=" flex w-full flex-col md:flex-row">
+<div class=" flex w-full flex-col lg:flex-row gap-4">
   <div class="flex-[5]">
-    <div class=" rounded-xl bg-white p-10">
+    <div class=" rounded-xl bg-white p-4 sm:p-10">
       <div class="logo w-[34.75px] h-[40px]"></div>
-      <div class=" text-[#262B2C] text-2xl font-semibold  mt-10">Your Mortgage</div>
-      <div class="text-[#262B2C] text-4xl font-semibold mt-5">Calculate Your mortgage</div>
-      <form (ngSubmit)="calculateMortgage()" class="my-20">
-        <div class="flex justify-between gap-4 my-10">
+      <div class=" text-[#262B2C] text-lg sm:text-2xl font-semibold mt-2 sm:mt-10">Your Mortgage</div>
+      <div class="text-[#262B2C] text-2xl sm:text-4xl font-semibold mt-1 sm:mt-5">Calculate Your mortgage</div>
+      <form (ngSubmit)="calculateMortgage()" class="my-2 sm:my-20">
+        <div class="flex justify-between gap-4 my-2 sm:my-10 flex-col md:flex-row">
           <div class="flex-1">
             <div class="flex gap-2 items-center">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,7 +69,7 @@
             </div>
           </div>
         </div>
-        <div class="flex justify-between gap-4 my-10">
+        <div class="flex justify-between gap-4 my-2 sm:my-10 flex-col md:flex-row">
           <div class="flex-1">
             <div class="flex gap-2 items-center">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,7 +148,7 @@
             </div>
           </div>
         </div>
-        <div class="flex justify-between gap-4 my-10">
+        <div class="flex justify-between gap-4 my-2 sm:my-10 flex-col md:flex-row">
           <div class="flex-1">
             <div class="flex gap-2 items-center">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -178,25 +178,9 @@
           </div>
           <div class="flex-1"></div>
         </div>
-        <!-- <div>
-          <label for="loanTerm">Loan Term (years):</label>
-          <input type="number" id="loanTerm" [(ngModel)]="loanTerm" name="loanTerm" required>
-        </div>
-        <div>
-          <label for="propertyValue">Property Value:</label>
-          <input type="number" id="propertyValue" [(ngModel)]="propertyValue" name="propertyValue" required>
-        </div>
-        <div>
-          <label for="monthlyDebt">Monthly Debt:</label>
-          <input type="number" id="monthlyDebt" [(ngModel)]="monthlyDebt" name="monthlyDebt" required>
-        </div>
-        <div>
-          <label for="monthlyIncome">Monthly Income:</label>
-          <input type="number" id="monthlyIncome" [(ngModel)]="monthlyIncome" name="monthlyIncome" required>
-        </div> -->
       </form>
     </div>
-    <div class="mt-10">
+    <div class="mt-10 hidden lg:block">
       <button
         class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-[#194DFA] focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Go
         Back</button>
@@ -205,11 +189,11 @@
         Step</button>
     </div>
   </div>
-  <div class="flex-[3] p-16 flex items-center">
+  <div class="flex-[3] p-0 lg:p-16 flex items-center">
     <app-results-display [monthlyPayment]="monthlyPayment" [ltv]="ltv" [dti]="dti"
       [loanTerm]="loanTerm"></app-results-display>
   </div>
-  <div class="flex flex-col justify-center gap-2">
+  <div class="flex-col justify-center gap-2 hidden lg:flex">
     <div class="w-[8px] h-[60px] rounded-lg bg-[#194DFA] bg-opacity-25"></div>
     <div class="w-[8px] h-[60px] rounded-lg bg-[#194DFA] bg-opacity-25"></div>
     <div class="w-[8px] h-[60px] rounded-lg bg-[#194DFA] "></div>
@@ -218,5 +202,13 @@
     <div class="w-[8px] h-[60px] rounded-lg bg-[#194DFA] bg-opacity-25"></div>
     <div class="w-[8px] h-[60px] rounded-lg bg-[#194DFA] bg-opacity-25"></div>
     <div class="w-[8px] h-[60px] rounded-lg bg-[#194DFA] bg-opacity-25"></div>
+  </div>
+  <div class="mt-5 block lg:hidden">
+    <button
+      class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-[#194DFA] focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Go
+      Back</button>
+    <button
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Next
+      Step</button>
   </div>
 </div>
