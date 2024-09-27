@@ -12,4 +12,6 @@ export class ResultsDisplayComponent {
   @Input() monthlyPayment: number = 0;
   @Input() ltv: number = 0;
   @Input() dti: number = 0;
+  @Input() loanTerm: number = 0;
+  
 }
